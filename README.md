@@ -91,7 +91,7 @@ function Store() {
   ...
 } 
 
-var store = new Store([1])
+var store = new Store()
 store.data = [1,2,3] // trigger data.set event
 ```
 

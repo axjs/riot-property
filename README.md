@@ -2,8 +2,10 @@
 ## riot-property
 
 
-[Riot](https://muut.com/riotjs/) mixin. Create property triggered set, get, change events. Auto call update() when set value.
-
+[Riot](https://muut.com/riotjs/) mixin. 
+ - Create named property triggered **.set**, .**get**, **.change** events. 
+ - Auto call update() when set value.
+ - Check value on set, triggered **.check** event
 
 
 #### Example
@@ -31,10 +33,19 @@
 
 #### Usage
 
+  Init mixin 
 ``` javascript
-riot.mount('timer', { start: 0 })
+  this.mixin('property')
 ```
+
+  Set property *time* to *this* and init by *0*
+``` javascript
+  this.property('time', 0)
+```
+
+
 [![MIT License][license-image]][license-url]
+
 
 [![Riot Forum][riot-forum-image]][riot-forum-url]
 [![Join the chat at https://gitter.im/axjs/riot-property][gitter-image]][gitter-url]

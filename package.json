@@ -1,0 +1,23 @@
+{
+  "name": "riot-property",
+  "version": "0.28.0",
+  "description": "Create named property triggered set, get, change events.",
+  "main": "riot-property.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/axjs/riot-property.git"
+  },
+  "keywords": [
+    "riot",
+    "property"
+  ],
+  "author": "Ax",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/axjs/riot-property/issues"
+  },
+  "homepage": "https://github.com/axjs/riot-property"
+}

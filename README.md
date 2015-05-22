@@ -4,8 +4,8 @@
 
 [Riot](https://muut.com/riotjs/) mixin. 
  - Create named property triggered **.set**, .**get**, **.change** events. 
+ - May check value on set, trigger **.check** event
  - Auto call update() when set value.
- - Check value on set, trigger **.check** event
 
 
 #### Example

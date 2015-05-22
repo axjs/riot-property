@@ -2,7 +2,7 @@
 ## riot-property
 
 
-[Riot](https://muut.com/riotjs/) mixin. 
+[![Riot](https://muut.com/riotjs/logo/riot60x.png)](https://muut.com/riotjs/) mixin. 
  - Create named property triggered **.set**, .**get**, **.change** events. 
  - May check value on set, trigger **.check** event
  - Auto call update() when set value.

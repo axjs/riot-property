@@ -3,8 +3,8 @@
 
 
 [![Riot](https://muut.com/riotjs/logo/riot60x.png)](https://muut.com/riotjs/) mixin. 
- - Create named property triggered **.set**, .**get**, **.change** events. 
- - May check value on set, trigger **.check** event
+ - Create named property triggered **.set**, **.change** events. 
+ - May check value when set property, trigger **.check** event
  - Auto call update() when set value.
 
 
@@ -69,8 +69,8 @@
   Set property options
 ``` javascript
   this.property('time', 0 {
-    setter: function (value) { return time / 1000 },
-    getter: function (value) { return time * 1000 },
+    setter: function (value) { return value / 1000 },
+    getter: function (value) { return value * 1000 },
     checker: function (value) { return value < 0 },
     preventUpdate: true
   })

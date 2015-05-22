@@ -1,6 +1,8 @@
 
 ## riot-property
 
+[![Join the chat at https://gitter.im/axjs/riot-property](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/axjs/riot-property?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [Riot](https://muut.com/riotjs/) mixin. Create property triggered set, get, change events. Auto call update() when set value.
 
 

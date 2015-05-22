@@ -88,10 +88,11 @@ function Store() {
   this.on('data.set', function(data) {
     this.save(data)
   })
-  
   ...
-  
-  this.data = [1,2,3] // trigger data.set event
+} 
+
+var store = new Store([1])
+store.data = [1,2,3] // trigger data.set event
 ```
 
   Prevent auto call `update()` when set property

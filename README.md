@@ -60,19 +60,19 @@
   Create many properties
 ``` javascript
   this.properties({
-   data: {},
-   time: Date.now(),
-   counter: 0
+    data: {},
+    time: Date.now(),
+    counter: 0
   })
 ```
 
   Set property options
 ``` javascript
   this.property('time', 0 {
-   setter: function (value) { return time / 1000 },
-   getter: function (value) { return time * 1000 },
-   checker: function (value) { return value < 0 },
-   preventUpdate: true
+    setter: function (value) { return time / 1000 },
+    getter: function (value) { return time * 1000 },
+    checker: function (value) { return value < 0 },
+    preventUpdate: true
   })
 ```
 
@@ -86,12 +86,12 @@ function Store() {
   riot.property(this, 'data', [])
 
   this.on('data.set', function(data) {
-   this.save(data)
+    this.save(data)
   })
   
   ...
   
-    this.data = [1,2,3] // trigger data.set event
+  this.data = [1,2,3] // trigger data.set event
 ```
 
   Prevent auto call `update()` when object set

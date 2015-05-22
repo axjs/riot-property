@@ -38,33 +38,42 @@
   this.mixin('property')
 ```
 
-  Set property `time` to `this` and init by `0`
+  Create property by name and init value 
 ``` javascript
   this.property('time', 0)
 ```
 
-  Listen property events `{propert_name}.{event_name}`
+  Listen property events `{property_name}.{event_type}`
 ``` javascript
   this.on('time.set', function (value) {...})
   this.on('time.change', function (value) {...})
   this.on('time.check', function (value) {...})
 ```
 
-  Listen events of all object properties `*.{event_name}`
+  Listen events of all object properties `*.{event_type}`
 ``` javascript
   this.on('*.set', function (name, value) {...})
   this.on('*.change', function (name, value) {...})
   this.on('*.check', function (name, value) {...})
 ```
 
-  Prevent auto call `update()` when object set
+  Create many properties
 ``` javascript
-  this.preventUpdate = true
-  
-  // not auto call update() on property set
-  ++this.time
-  
-  this.preventUpdate = false
+  this.properties({
+   data: {},
+   time: Date.now(),
+   counter: 0
+  })
+```
+
+  Set property options
+``` javascript
+  this.property('time', 0 {
+   setter: function (value) { return time / 1000 },
+   getter: function (value) { return time * 1000 },
+   checker: function (value) { return value < 0 },
+   preventUpdate: true
+  })
 ```
 
   Set property to observable object by `riot.property`
@@ -85,23 +94,14 @@ function Store() {
     this.data = [1,2,3] // trigger data.set event
 ```
 
-  Create properties
+  Prevent auto call `update()` when object set
 ``` javascript
-  this.properties({
-   data: {},
-   time: Date.now(),
-   counter: 0
-  })
-```
-
-  Set property options
-``` javascript
-  this.property('time', 0 {
-   setter: function (value) { return time / 1000 },
-   getter: function (value) { return time * 1000 },
-   checker: function (value) { return value < 0 },
-   preventUpdate: true
-  })
+  this.preventUpdate = true
+  
+  // not auto call update() on property set
+  ++this.time
+  
+  this.preventUpdate = false
 ```
 
 

@@ -5,7 +5,7 @@
 [Riot](https://muut.com/riotjs/) mixin. 
  - Create named property triggered **.set**, .**get**, **.change** events. 
  - Auto call update() when set value.
- - Check value on set, triggered **.check** event
+ - Check value on set, trigger **.check** event
 
 
 #### Example
@@ -38,9 +38,70 @@
   this.mixin('property')
 ```
 
-  Set property *time* to *this* and init by *0*
+  Set property `time` to `this` and init by `0`
 ``` javascript
   this.property('time', 0)
+```
+
+  Listen property events `{propert_name}.{event_name}`
+``` javascript
+  this.on('time.set', function (value) {...})
+  this.on('time.change', function (value) {...})
+  this.on('time.check', function (value) {...})
+```
+
+  Listen events of all object properties `*.{event_name}`
+``` javascript
+  this.on('*.set', function (name, value) {...})
+  this.on('*.change', function (name, value) {...})
+  this.on('*.check', function (name, value) {...})
+```
+
+  Prevent auto call `update()` when object set
+``` javascript
+  this.preventUpdate = true
+  
+  // not auto call update() on property set
+  ++this.time
+  
+  this.preventUpdate = false
+```
+
+  Set property to observable object by `riot.property`
+``` javascript
+function Store() {
+  if (!(this instanceof Store)) return new Store()
+
+  riot.observable(this)
+  
+  riot.property(this, 'data', [])
+
+  this.on('data.set', function(data) {
+   this.save(data)
+  })
+  
+  ...
+  
+    this.data = [1,2,3] // trigger data.set event
+```
+
+  Create properties
+``` javascript
+  this.properties({
+   data: {},
+   time: Date.now(),
+   counter: 0
+  })
+```
+
+  Set property options
+``` javascript
+  this.property('time', 0 {
+   setter: function (value) { return time / 1000 },
+   getter: function (value) { return time * 1000 },
+   checker: function (value) { return value < 0 },
+   preventUpdate: true
+  })
 ```
 
 

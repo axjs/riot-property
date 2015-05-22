@@ -1,7 +1,6 @@
 
 ## riot-property
 
-[![Join the chat at https://gitter.im/axjs/riot-property](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/axjs/riot-property?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [Riot](https://muut.com/riotjs/) mixin. Create property triggered set, get, change events. Auto call update() when set value.
 
@@ -39,6 +38,9 @@ riot.mount('timer', { start: 0 })
 
 [![Riot Forum][riot-forum-image]][riot-forum-url]
 [![Join the chat at https://gitter.im/axjs/riot-property][gitter-image]][gitter-url]
+<!---
+[![Join the chat at https://gitter.im/axjs/riot-property](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/axjs/riot-property?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+-->
 
 [license-image]:http://img.shields.io/badge/license-MIT-000000.svg?style=flat-square
 [license-url]:LICENSE.txt
@@ -48,3 +50,4 @@ riot.mount('timer', { start: 0 })
 
 [gitter-image]:https://img.shields.io/badge/GITTER-JOIN_CHAT_%E2%86%92-1dce73.svg?style=flat-square
 [gitter-url]:https://gitter.im/axjs/riot-property?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+

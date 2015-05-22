@@ -38,7 +38,7 @@
   this.mixin('property')
 ```
 
-  Create property by name and init value 
+  Create property by name and optional init value 
 ``` javascript
   this.property('time', 0)
 ```
@@ -94,7 +94,7 @@ function Store() {
   this.data = [1,2,3] // trigger data.set event
 ```
 
-  Prevent auto call `update()` when object set
+  Prevent auto call `update()` when set property
 ``` javascript
   this.preventUpdate = true
   

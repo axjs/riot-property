@@ -20,7 +20,7 @@
   this.property('time', opts.start || 0, this.update)
 
   tick() {
-    ++this.time // Auto call update() when this.time changed
+    this.time++ // Auto call update() when this.time changed
   }
 
   var timer = setInterval(this.tick, 1000)
@@ -130,7 +130,7 @@ store.data = [1,2,3] // trigger data.set event
   this.preventOnchange = true
   
   // onchange callback not run
-  ++this.time
+  this.time++
   
   this.preventOnchange = false
 ```

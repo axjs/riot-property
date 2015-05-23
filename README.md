@@ -125,14 +125,14 @@ var store = new Store()
 store.data = [1,2,3] // trigger data.set event
 ```
 
-  Prevent auto call `update()` when set property
+  Prevent auto call `onchange` callback when change property
 ``` javascript
-  this.preventUpdate = true
+  this.preventOnchange = true
   
-  // not auto call update() on property set
+  // onchange callback not run
   ++this.time
   
-  this.preventUpdate = false
+  this.preventOnchange = false
 ```
 
 

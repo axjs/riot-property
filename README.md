@@ -2,7 +2,7 @@
 ## riot-property
 
 
-[![Riot](https://muut.com/riotjs/logo/riot60x.png)](https://muut.com/riotjs/) mixin. 
+[![Riot](https://muut.com/riotjs/logo/riot60x.png)](https://muut.com/riotjs/) mixin for declarative and reactive developing.
  - Named property triggered **.set**, **.change** events on set value. 
  - May check value on set, trigger **.check** event
  - Run callback when changed
@@ -57,7 +57,7 @@
 - `onchange_callback` - callback function called when property value change
 - `observable_object` - riot observable object
 - `names_values_object` - object in which the keys and values are properties `names` and `init_values`
-- `options_object` - object whith optional keys `setter`, `getter`, `checker`, `onchange`, `onset`
+- `options_object` - object with optional keys `setter`, `getter`, `checker`, `onchange`, `onset`
  
 #### Usage
 

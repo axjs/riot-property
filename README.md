@@ -20,7 +20,7 @@
   this.property('time', opts.start || 0, this.update)
 
   tick() {
-    ++this.time
+    ++this.time // Auto call update() when this.time changed
   }
 
   var timer = setInterval(this.tick, 1000)

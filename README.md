@@ -3,9 +3,10 @@
 
 
 [![Riot](https://muut.com/riotjs/logo/riot60x.png)](https://muut.com/riotjs/) mixin. 
- - Create named property triggered **.set**, **.change** events. 
- - May check value when set property, trigger **.check** event
- - Auto call update() when set value.
+ - Named property triggered **.set**, **.change** events on set value. 
+ - May check value on set, trigger **.check** event
+ - Run callback when changed
+ - ...
 
 
 #### Example
@@ -16,7 +17,7 @@
   <p>Seconds Elapsed: { time }</p>
 
   this.mixin('property')
-  this.property('time', opts.start || 0 )
+  this.property('time', opts.start || 0, this.update)
 
   tick() {
     ++this.time
@@ -31,6 +32,33 @@
 </timer>
 ```
 
+#### API
+
+  Create property in riot tag
+``` javascript
+  this.property(name, [init_value], [onchange_callback | options_object])
+```
+
+  Create property in observable object
+``` javascript
+  riot.property(observable_object, name, [ init_value ], [ onchange_callback | options_object ])
+```
+
+  Create properties
+``` javascript
+  // in riot tag
+  this.properties(names_values_object, [ onchange_callback | options ])
+  // in observable object
+  riot.properties(observable_object, names_values_object, [ onchange_callback | options_object ])
+```
+ 
+- `name` - property name
+- `init_value` - property init wthis this value
+- `onchange_callback` - callback function called when property value change
+- `observable_object` - riot observable object
+- `names_values_object` - object in which the keys and values are properties `names` and `init_values`
+- `options_object` - object whith optional keys `setter`, `getter`, `checker`, `onchange`, `onset`
+ 
 #### Usage
 
   Init mixin 
@@ -68,11 +96,13 @@
 
   Set property options
 ``` javascript
-  this.property('time', 0 {
+  this.property('time', 0, {
     setter: function (value) { return value / 1000 },
     getter: function (value) { return value * 1000 },
     checker: function (value) { return value < 0 },
-    preventUpdate: true
+    // callbacks
+    onchange: function () { this.update() },
+    onset: function () { this.save() },
   })
 ```
 

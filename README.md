@@ -48,6 +48,7 @@
 ``` javascript
   // in riot tag
   this.properties(names_values_object, [ onchange_callback | options ])
+
   // in observable object
   riot.properties(observable_object, names_values_object, [ onchange_callback | options_object ])
 ```

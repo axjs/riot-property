@@ -36,29 +36,29 @@
 
   Create property in riot tag
 ``` javascript
-  this.property(name, [init_value], [onchange_callback | options_object])
+  this.property(name, [value], [onchange | options])
 ```
 
   Create property in observable object
 ``` javascript
-  riot.property(observable_object, name, [ init_value ], [ onchange_callback | options_object ])
+  riot.property(observable_object, name, [ value ], [ onchange | options ])
 ```
 
   Create properties
 ``` javascript
   // in riot tag
-  this.properties(names_values_object, [ onchange_callback | options ])
+  this.properties(names_values_object, [ onchange | options ])
 
   // in observable object
-  riot.properties(observable_object, names_values_object, [ onchange_callback | options_object ])
+  riot.properties(observable_object, names_values_object, [ onchange | options])
 ```
  
 - `name` - property name
-- `init_value` - property init wthis this value
-- `onchange_callback` - callback function called when property value change
+- `value` - property init wthis this value
+- `onchange` - callback function called when property value change
 - `observable_object` - riot observable object
 - `names_values_object` - object in which the keys and values are properties `names` and `init_values`
-- `options_object` - object with optional keys `setter`, `getter`, `checker`, `onchange`, `onset`
+- `options` - object with optional keys `setter`, `getter`, `checker`, `onchange`, `onset`
  
 #### Usage
 

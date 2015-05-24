@@ -2,10 +2,12 @@
 ## riot-property
 
 
-[![Riot](https://muut.com/riotjs/logo/riot60x.png)](https://muut.com/riotjs/) mixin for declarative and reactive developing.
- - Named property triggered **.set**, **.change** events on set value. 
- - May check value on set, trigger **.check** event
- - Run callback when changed
+[![Riot](https://muut.com/riotjs/logo/riot60x.png)](https://muut.com/riotjs/) `mixin` and helpers for declarative and reactive developing.
+
+ - Named property triggered **.set**, **.change** events when set value
+ - Can use **setter**, **getter**, **checker**  handlers
+ - Can be set handler on value change
+ - Isomorphic - work in tags and any observable objects
  - ...
 
 
@@ -41,23 +43,23 @@
 
   Create property in observable object
 ``` javascript
-  riot.property(observable_object, name, [ value ], [ onchange | options ])
+  riot.property(observer, name, [ value ], [ onchange | options ])
 ```
 
   Create properties
 ``` javascript
   // in riot tag
-  this.properties(names_values_object, [ onchange | options ])
+  this.properties(values, [ onchange | options ])
 
   // in observable object
-  riot.properties(observable_object, names_values_object, [ onchange | options])
+  riot.properties(observer, values, [ onchange | options])
 ```
  
 - `name` - property name
 - `value` - property init wthis this value
 - `onchange` - callback function called when property value change
-- `observable_object` - riot observable object
-- `names_values_object` - object in which the keys and values are properties `names` and `init_values`
+- `observer` - riot observable object
+- `values` - object in which the keys and values are properties `name` and `value`
 - `options` - object with optional keys `setter`, `getter`, `checker`, `onchange`, `onset`
  
 #### Usage

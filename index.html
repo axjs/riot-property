@@ -34,12 +34,13 @@
         <h2>
 <a id="riot-property" class="anchor" href="#riot-property" aria-hidden="true"><span class="octicon octicon-link"></span></a>riot-property</h2>
 
-<p><a href="https://muut.com/riotjs/"><img src="https://muut.com/riotjs/logo/riot60x.png" alt="Riot"></a> mixin for declarative and reactive developing.</p>
+<p><a href="https://muut.com/riotjs/"><img src="https://muut.com/riotjs/logo/riot60x.png" alt="Riot"></a> <code>mixin</code> and helpers for declarative and reactive developing.</p>
 
 <ul>
-<li>Named property triggered <strong>.set</strong>, <strong>.change</strong> events on set value. </li>
-<li>May check value on set, trigger <strong>.check</strong> event</li>
-<li>Run callback when changed</li>
+<li>Named property triggered <strong>.set</strong>, <strong>.change</strong> events when set value</li>
+<li>Can use <strong>setter</strong>, <strong>getter</strong>, <strong>checker</strong>  handlers</li>
+<li>Can be set handler on value change</li>
+<li>Isomorphic - work in tags and any observable objects</li>
 <li>...</li>
 </ul>
 
@@ -70,34 +71,34 @@
 
 <p>Create property in riot tag</p>
 
-<div class="highlight highlight-javascript"><pre>  <span class="pl-v">this</span>.property(name, [init_value], [onchange_callback | options_object])</pre></div>
+<div class="highlight highlight-javascript"><pre>  <span class="pl-v">this</span>.property(name, [value], [onchange | options])</pre></div>
 
 <p>Create property in observable object</p>
 
-<div class="highlight highlight-javascript"><pre>  riot.property(observable_object, name, [ init_value ], [ onchange_callback | options_object ])</pre></div>
+<div class="highlight highlight-javascript"><pre>  riot.property(observer, name, [ value ], [ onchange | options ])</pre></div>
 
 <p>Create properties</p>
 
 <div class="highlight highlight-javascript"><pre>  <span class="pl-c">// in riot tag</span>
-  <span class="pl-v">this</span>.properties(names_values_object, [ onchange_callback | options ])
+  <span class="pl-v">this</span>.properties(values, [ onchange | options ])
 
   <span class="pl-c">// in observable object</span>
-  riot.properties(observable_object, names_values_object, [ onchange_callback | options_object ])</pre></div>
+  riot.properties(observer, values, [ onchange | options])</pre></div>
 
 <ul>
 <li>
 <code>name</code> - property name</li>
 <li>
-<code>init_value</code> - property init wthis this value</li>
+<code>value</code> - property init wthis this value</li>
 <li>
-<code>onchange_callback</code> - callback function called when property value change</li>
+<code>onchange</code> - callback function called when property value change</li>
 <li>
-<code>observable_object</code> - riot observable object</li>
+<code>observer</code> - riot observable object</li>
 <li>
-<code>names_values_object</code> - object in which the keys and values are properties <code>names</code> and <code>init_values</code>
+<code>values</code> - object in which the keys and values are properties <code>name</code> and <code>value</code>
 </li>
 <li>
-<code>options_object</code> - object with optional keys <code>setter</code>, <code>getter</code>, <code>checker</code>, <code>onchange</code>, <code>onset</code>
+<code>options</code> - object with optional keys <code>setter</code>, <code>getter</code>, <code>checker</code>, <code>onchange</code>, <code>onset</code>
 </li>
 </ul>
 

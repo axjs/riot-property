@@ -36,17 +36,17 @@
 
 #### API
 
-  Create property in riot tag
+  Creating property in riot tag
 ``` javascript
   this.property(name, [value], [onchange | options])
 ```
 
-  Create property in observable object
+  Creating property in observable object
 ``` javascript
   riot.property(observer, name, [ value ], [ onchange | options ])
 ```
 
-  Create properties
+  Creating properties
 ``` javascript
   // in riot tag
   this.properties(values, [ onchange | options ])
@@ -56,39 +56,39 @@
 ```
  
 - `name` - property name
-- `value` - property init wthis this value
+- `value` - property initialisation whith this value
 - `onchange` - callback function called when property value change
 - `observer` - riot observable object
-- `values` - object in which the keys and values are properties `name` and `value`
+- `values` - properties `name` and `value` and the keys and values that are kept in object
 - `options` - object with optional keys `setter`, `getter`, `checker`, `onchange`, `onset`
  
 #### Usage
 
-  Init mixin 
+  Initialisation of mixin 
 ``` javascript
   this.mixin('property')
 ```
 
-  Create property by name and optional init value 
+  Creating property by name and optional init value 
 ``` javascript
   this.property('time', 0)
 ```
 
-  Listen property events `{property_name}.{event_type}`
+  Listening property events `{property_name}.{event_type}`
 ``` javascript
   this.on('time.set', function (value) {...})
   this.on('time.change', function (value) {...})
   this.on('time.check', function (value) {...})
 ```
 
-  Listen events of all object properties `*.{event_type}`
+  Listening events of all properties object `*.{event_type}`
 ``` javascript
   this.on('*.set', function (name, value) {...})
   this.on('*.change', function (name, value) {...})
   this.on('*.check', function (name, value) {...})
 ```
 
-  Create many properties
+  Creating many properties
 ``` javascript
   this.properties({
     data: {},
@@ -97,7 +97,7 @@
   })
 ```
 
-  Set property options
+  Setting options of property 
 ``` javascript
   this.property('time', 0, {
     setter: function (value) { return value / 1000 },
@@ -109,7 +109,7 @@
   })
 ```
 
-  Set property to observable object by `riot.property`
+  Setting property to observable object by `riot.property`
 ``` javascript
 function Store() {
   if (!(this instanceof Store)) return new Store()
@@ -128,7 +128,7 @@ var store = new Store()
 store.data = [1,2,3] // trigger data.set event
 ```
 
-  Prevent auto call `onchange` callback when change property
+  Preventing auto trigger event `onchange` when property changed
 ``` javascript
   this.preventOnchange = true
   

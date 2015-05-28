@@ -69,15 +69,15 @@
 <h4>
 <a id="api" class="anchor" href="#api" aria-hidden="true"><span class="octicon octicon-link"></span></a>API</h4>
 
-<p>Create property in riot tag</p>
+<p>Creating property in riot tag</p>
 
 <div class="highlight highlight-javascript"><pre>  <span class="pl-v">this</span>.property(name, [value], [onchange | options])</pre></div>
 
-<p>Create property in observable object</p>
+<p>Creating property in observable object</p>
 
 <div class="highlight highlight-javascript"><pre>  riot.property(observer, name, [ value ], [ onchange | options ])</pre></div>
 
-<p>Create properties</p>
+<p>Creating properties</p>
 
 <div class="highlight highlight-javascript"><pre>  <span class="pl-c">// in riot tag</span>
   <span class="pl-v">this</span>.properties(values, [ onchange | options ])
@@ -89,14 +89,13 @@
 <li>
 <code>name</code> - property name</li>
 <li>
-<code>value</code> - property init wthis this value</li>
+<code>value</code> - property initialisation whith this value</li>
 <li>
 <code>onchange</code> - callback function called when property value change</li>
 <li>
 <code>observer</code> - riot observable object</li>
 <li>
-<code>values</code> - object in which the keys and values are properties <code>name</code> and <code>value</code>
-</li>
+<code>values</code> - properties <code>name</code> and <code>value</code> and the keys and values that are kept in object</li>
 <li>
 <code>options</code> - object with optional keys <code>setter</code>, <code>getter</code>, <code>checker</code>, <code>onchange</code>, <code>onset</code>
 </li>
@@ -105,27 +104,27 @@
 <h4>
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h4>
 
-<p>Init mixin </p>
+<p>Initialisation of mixin </p>
 
 <div class="highlight highlight-javascript"><pre>  <span class="pl-v">this</span>.mixin(<span class="pl-s"><span class="pl-pds">'</span>property<span class="pl-pds">'</span></span>)</pre></div>
 
-<p>Create property by name and optional init value </p>
+<p>Creating property by name and optional init value </p>
 
 <div class="highlight highlight-javascript"><pre>  <span class="pl-v">this</span>.property(<span class="pl-s"><span class="pl-pds">'</span>time<span class="pl-pds">'</span></span>, <span class="pl-c1">0</span>)</pre></div>
 
-<p>Listen property events <code>{property_name}.{event_type}</code></p>
+<p>Listening property events <code>{property_name}.{event_type}</code></p>
 
 <div class="highlight highlight-javascript"><pre>  <span class="pl-v">this</span>.on(<span class="pl-s"><span class="pl-pds">'</span>time.set<span class="pl-pds">'</span></span>, <span class="pl-k">function</span> (<span class="pl-smi">value</span>) {...})
   <span class="pl-v">this</span>.on(<span class="pl-s"><span class="pl-pds">'</span>time.change<span class="pl-pds">'</span></span>, <span class="pl-k">function</span> (<span class="pl-smi">value</span>) {...})
   <span class="pl-v">this</span>.on(<span class="pl-s"><span class="pl-pds">'</span>time.check<span class="pl-pds">'</span></span>, <span class="pl-k">function</span> (<span class="pl-smi">value</span>) {...})</pre></div>
 
-<p>Listen events of all object properties <code>*.{event_type}</code></p>
+<p>Listening events of all properties object <code>*.{event_type}</code></p>
 
 <div class="highlight highlight-javascript"><pre>  <span class="pl-v">this</span>.on(<span class="pl-s"><span class="pl-pds">'</span>*.set<span class="pl-pds">'</span></span>, <span class="pl-k">function</span> (<span class="pl-smi">name</span>, <span class="pl-smi">value</span>) {...})
   <span class="pl-v">this</span>.on(<span class="pl-s"><span class="pl-pds">'</span>*.change<span class="pl-pds">'</span></span>, <span class="pl-k">function</span> (<span class="pl-smi">name</span>, <span class="pl-smi">value</span>) {...})
   <span class="pl-v">this</span>.on(<span class="pl-s"><span class="pl-pds">'</span>*.check<span class="pl-pds">'</span></span>, <span class="pl-k">function</span> (<span class="pl-smi">name</span>, <span class="pl-smi">value</span>) {...})</pre></div>
 
-<p>Create many properties</p>
+<p>Creating many properties</p>
 
 <div class="highlight highlight-javascript"><pre>  <span class="pl-v">this</span>.properties({
     data<span class="pl-k">:</span> {},
@@ -133,7 +132,7 @@
     counter<span class="pl-k">:</span> <span class="pl-c1">0</span>
   })</pre></div>
 
-<p>Set property options</p>
+<p>Setting options of property </p>
 
 <div class="highlight highlight-javascript"><pre>  <span class="pl-v">this</span>.property(<span class="pl-s"><span class="pl-pds">'</span>time<span class="pl-pds">'</span></span>, <span class="pl-c1">0</span>, {
     <span class="pl-en">setter</span>: <span class="pl-k">function</span> (<span class="pl-smi">value</span>) { <span class="pl-k">return</span> value / <span class="pl-c1">1000</span> },
@@ -144,7 +143,7 @@
     <span class="pl-en">onset</span>: <span class="pl-k">function</span> () { <span class="pl-v">this</span>.save() },
   })</pre></div>
 
-<p>Set property to observable object by <code>riot.property</code></p>
+<p>Setting property to observable object by <code>riot.property</code></p>
 
 <div class="highlight highlight-javascript"><pre><span class="pl-k">function</span> <span class="pl-en">Store</span>() {
   <span class="pl-k">if</span> (<span class="pl-k">!</span>(<span class="pl-v">this</span> <span class="pl-k">instanceof</span> Store)) <span class="pl-k">return</span> <span class="pl-k">new</span> <span class="pl-en">Store</span>()
@@ -162,7 +161,7 @@
 <span class="pl-k">var</span> store <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Store</span>()
 store.<span class="pl-c1">data</span> <span class="pl-k">=</span> [<span class="pl-c1">1</span>,<span class="pl-c1">2</span>,<span class="pl-c1">3</span>] <span class="pl-c">// trigger data.set event</span></pre></div>
 
-<p>Prevent auto call <code>onchange</code> callback when change property</p>
+<p>Preventing auto trigger event <code>onchange</code> when property changed</p>
 
 <div class="highlight highlight-javascript"><pre>  <span class="pl-v">this</span>.preventOnchange <span class="pl-k">=</span> <span class="pl-c1">true</span>
 

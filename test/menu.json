@@ -1,0 +1,319 @@
+[
+    {
+      "Id": 747,
+      "Name": "Kлассификатор меню ресторана",
+      "NodeId": 0,
+      "ParentId": 0,
+      "groups": [
+        {
+          "Id": 748,
+          "Name": "Меню дня",
+          "NodeId": 0,
+          "ParentId": 747,
+          "groups": [
+            {
+              "Id": 1363,
+              "Name": "1",
+              "NodeId": 1,
+              "ParentId": 748,
+              "groups": [
+                {
+                  "Id": 1367,
+                  "Name": "2",
+                  "NodeId": 1,
+                  "ParentId": 1363,
+                  "groups": [],
+                  "goods": [
+                    {
+                      "ClassifierId": 1367,
+                      "LagerId": 666,
+                      "LagerRowId": 1,
+                      "name": "Напій Sprite"
+                    }
+                  ]
+                },
+                {
+                  "Id": 1368,
+                  "Name": "3",
+                  "NodeId": 2,
+                  "ParentId": 1363,
+                  "groups": [],
+                  "goods": [
+                    {
+                      "ClassifierId": 1368,
+                      "LagerId": 667,
+                      "LagerRowId": 1,
+                      "name": "Напій Fanta Лимон"
+                    }
+                  ]
+                },
+                {
+                  "Id": 1369,
+                  "Name": "4",
+                  "NodeId": 3,
+                  "ParentId": 1363,
+                  "groups": [],
+                  "goods": [
+                    {
+                      "ClassifierId": 1369,
+                      "LagerId": 668,
+                      "LagerRowId": 1,
+                      "name": "Напій Fanta Orange"
+                    }
+                  ]
+                }
+              ],
+              "goods": []
+            },
+            {
+              "Id": 1366,
+              "Name": "5",
+              "NodeId": 2,
+              "ParentId": 748,
+              "groups": [
+                {
+                  "Id": 1375,
+                  "Name": "6",
+                  "NodeId": 1,
+                  "ParentId": 1366,
+                  "groups": [],
+                  "goods": []
+                },
+                {
+                  "Id": 1376,
+                  "Name": "7",
+                  "NodeId": 2,
+                  "ParentId": 1366,
+                  "groups": [],
+                  "goods": [
+                    {
+                      "ClassifierId": 1376,
+                      "LagerId": 36,
+                      "LagerRowId": 1,
+                      "name": "Батончик Bounty Мастер Фуд"
+                    }
+                  ]
+                },
+                {
+                  "Id": 1377,
+                  "Name": "8",
+                  "NodeId": 3,
+                  "ParentId": 1366,
+                  "groups": [],
+                  "goods": [
+                    {
+                      "ClassifierId": 1377,
+                      "LagerId": 666,
+                      "LagerRowId": 1,
+                      "name": "Напій Sprite"
+                    }
+                  ]
+                },
+                {
+                  "Id": 1378,
+                  "Name": "9",
+                  "NodeId": 4,
+                  "ParentId": 1366,
+                  "groups": [],
+                  "goods": [
+                    {
+                      "ClassifierId": 1378,
+                      "LagerId": 667,
+                      "LagerRowId": 1,
+                      "name": "Напій Fanta Лимон"
+                    }
+                  ]
+                }
+              ],
+              "goods": []
+            },
+            {
+              "Id": 1364,
+              "Name": "10",
+              "NodeId": 3,
+              "ParentId": 748,
+              "groups": [
+                {
+                  "Id": 1370,
+                  "Name": "11",
+                  "NodeId": 1,
+                  "ParentId": 1364,
+                  "groups": [],
+                  "goods": []
+                },
+                {
+                  "Id": 1371,
+                  "Name": "12",
+                  "NodeId": 2,
+                  "ParentId": 1364,
+                  "groups": [],
+                  "goods": []
+                },
+                {
+                  "Id": 1372,
+                  "Name": "13",
+                  "NodeId": 3,
+                  "ParentId": 1364,
+                  "groups": [],
+                  "goods": []
+                }
+              ],
+              "goods": []
+            },
+            {
+              "Id": 1365,
+              "Name": "14",
+              "NodeId": 4,
+              "ParentId": 748,
+              "groups": [
+                {
+                  "Id": 1373,
+                  "Name": "15",
+                  "NodeId": 1,
+                  "ParentId": 1365,
+                  "groups": [],
+                  "goods": [
+                    {
+                      "ClassifierId": 1373,
+                      "LagerId": 260,
+                      "LagerRowId": 1,
+                      "name": "Горілка Особлива Козацька Рада"
+                    }
+                  ]
+                },
+                {
+                  "Id": 1374,
+                  "Name": "16",
+                  "NodeId": 2,
+                  "ParentId": 1365,
+                  "groups": [],
+                  "goods": []
+                }
+              ],
+              "goods": []
+            },
+            {
+              "Id": 1309,
+              "Name": "Первое",
+              "NodeId": 5,
+              "ParentId": 748,
+              "groups": [
+                {
+                  "Id": 1311,
+                  "Name": "Суп горох",
+                  "NodeId": 1,
+                  "ParentId": 1309,
+                  "groups": [],
+                  "goods": []
+                },
+                {
+                  "Id": 1312,
+                  "Name": "Борщ",
+                  "NodeId": 2,
+                  "ParentId": 1309,
+                  "groups": [],
+                  "goods": [
+                    {
+                      "ClassifierId": 1312,
+                      "LagerId": 666,
+                      "LagerRowId": 1,
+                      "name": "Напій Sprite"
+                    }
+                  ]
+                }
+              ],
+              "goods": []
+            },
+            {
+              "Id": 1054,
+              "Name": "Второе",
+              "NodeId": 6,
+              "ParentId": 748,
+              "groups": [
+                {
+                  "Id": 1056,
+                  "Name": "Жаркое",
+                  "NodeId": 1,
+                  "ParentId": 1054,
+                  "groups": [],
+                  "goods": [
+                    {
+                      "ClassifierId": 1056,
+                      "LagerId": 667,
+                      "LagerRowId": 1,
+                      "name": "Напій Fanta Лимон"
+                    }
+                  ]
+                },
+                {
+                  "Id": 1057,
+                  "Name": "Плов",
+                  "NodeId": 2,
+                  "ParentId": 1054,
+                  "groups": [],
+                  "goods": [
+                    {
+                      "ClassifierId": 1057,
+                      "LagerId": 36,
+                      "LagerRowId": 1,
+                      "name": "Батончик Bounty Мастер Фуд"
+                    }
+                  ]
+                }
+              ],
+              "goods": []
+            },
+            {
+              "Id": 1059,
+              "Name": "Десерт",
+              "NodeId": 7,
+              "ParentId": 748,
+              "groups": [
+                {
+                  "Id": 1061,
+                  "Name": "Торт",
+                  "NodeId": 1,
+                  "ParentId": 1059,
+                  "groups": [],
+                  "goods": [
+                    {
+                      "ClassifierId": 1061,
+                      "LagerId": 35,
+                      "LagerRowId": 1,
+                      "name": "Батончик Snickers більше арахісу"
+                    }
+                  ]
+                },
+                {
+                  "Id": 1062,
+                  "Name": "Мороженое",
+                  "NodeId": 2,
+                  "ParentId": 1059,
+                  "groups": [],
+                  "goods": [
+                    {
+                      "ClassifierId": 1062,
+                      "LagerId": 34,
+                      "LagerRowId": 1,
+                      "name": "Батончик Mars Мастер Фуд"
+                    }
+                  ]
+                },
+                {
+                  "Id": 1380,
+                  "Name": "Пломбир",
+                  "NodeId": 3,
+                  "ParentId": 1059,
+                  "groups": [],
+                  "goods": []
+                }
+              ],
+              "goods": []
+            }
+          ],
+          "goods": []
+        }
+      ],
+      "goods": []
+    }
+  ]

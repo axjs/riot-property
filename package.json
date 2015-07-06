@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/axjs/riot-property/issues"
   },
-  "homepage": "https://github.com/axjs/riot-property"
+  "homepage": "https://github.com/axjs/riot-property",
+  "dependencies": {
+    "install": "^0.1.8",
+    "npm": "^2.12.1",
+    "riot": "^2.2.2-beta",
+    "riotify": "^0.1.2"
+  }
 }

@@ -1,0 +1,14 @@
+<stack>
+  <div id="stack"><yield/></div>
+
+  this.mixin('property')
+  
+  this.on('current.set', function() {
+    if (!this.current) 
+      return;
+    this.stack.appendChild(this.current.root)
+  }.bind(this))  
+  
+  this.property('current', opts.current, this.update)
+  
+</stack>

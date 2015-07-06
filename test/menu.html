@@ -1,0 +1,56 @@
+<menu>
+    <div class="btn-toolbar" role="toolbar">
+      <div each={ row in data } class="btn-group btn-group-lg btn-group-justified btn-group-fill-height">
+        <a each={ row } disabled={!name} href="#" class="btn btn-default {btn-primary:groupId && name, btn-success:!groupId && name}" onclick={parent.parent.click} role="button">
+          <strong if={groupId}>{name}</strong>
+          <br>
+          <span if={!groupId}>{name}</span>
+        </a>
+      </div>
+    </div>
+
+
+<script>
+
+  this.mixin('lazy-update')
+  this.mixin('property')
+
+  this.property({'data': opts.data || []}, this.update)
+  this.on('dataChange', this.update)
+
+  this.on('update', function() {
+    console.log('update', this)
+  })
+  
+  var self = this
+
+  this.on('mount', function() {
+    riot.trigger('menu.init')
+  })
+
+  riot.on('menu.changed', function(menu) {
+    self.data = menu
+    self.update()
+    self.update()
+    self.update()
+    self.update()
+    self.update()
+    self.update()
+  })
+  
+  click(e) {
+//      e.target.style.fontSize = '50px'
+    riot.trigger('menu.click', e.item)
+  }
+
+</script>
+
+<style >
+      .btn-group-fill-height .btn {
+        white-space: normal;
+      }
+</style>
+
+</menu>
+
+

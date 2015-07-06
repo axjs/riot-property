@@ -1,0 +1,36 @@
+<!DOCTYPE html5>
+<html>
+
+  <head>
+    <title>Riot Flux Demo</title>
+    <link data-require="bootstrap@*" data-semver="3.3.2" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+    <script data-require="jquery@*" data-semver="2.1.4" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script data-require="bootstrap@*" data-semver="3.3.2" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="uikit.almost-flat.min.css" />
+  </head>
+
+  <body>
+    <app></app>
+  
+    <script src="ramjet.js"></script>
+    <script src="app.html" type="riot/tag"></script>
+    <script src="tree.html" type="riot/tag"></script>
+    <script src="draw.html" type="riot/tag"></script>
+    <script src="timer.html" type="riot/tag"></script>
+    <script src="stack.html" type="riot/tag"></script>
+    <script src="header.html" type="riot/tag"></script>
+    <script src="menu.html" type="riot/tag"></script>
+    <script src="MenuStore.js"></script>
+    <script src="riot-compiler.js"></script>
+    <script src="riot-lazy-update.js"></script>
+    <script src="riot-property.js"></script>
+    <script src="store.js"></script>
+    <script>
+    riot.trigger || riot.observable(riot)
+    riot.compile(function() { 
+      riot.mount('app') 
+    })
+    </script>
+  </body>
+
+</html>

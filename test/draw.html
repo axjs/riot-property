@@ -1,0 +1,54 @@
+<draw>
+
+  <canvas id="canvas" onclick={toggle} onmousemove={move}></canvas>
+
+  this.mixin('lazy-update')
+
+  this.canvas.width = 256;
+  this.canvas.height = 256;
+
+  this.context = this.canvas.getContext( '2d' );  
+  this.enable = true
+   
+  toggle() {
+    this.enable = !this.enable
+  }
+  
+  move(e) {
+    this.x = e.layerX
+    this.y = e.layerY
+  }
+
+  var snake = {
+    render : function (context) {
+    }
+  }
+  
+  draw() {
+    if (!this.enable)
+      return
+      
+    var context = this.context
+
+    var time = new Date().getTime() * 0.002;
+
+    context.fillStyle = 'rgb(245,245,245)';
+    context.fillRect( 0, 0, 255, 255 );
+
+    var i = 100
+    while (i--) {
+      var x = Math.sin( time-i*0.1 ) * 96 + 128;
+      var y = Math.cos( (time-i*0.1) * 0.9 ) * 96 + 128;
+      context.fillStyle = 'rgba(255,0,0,'+(1/i)+')';
+      context.beginPath();
+      context.arc( x, y, 10, 0, Math.PI * 2, true );
+      context.closePath();
+      context.fill();
+      context.fillText("ax", this.x, this.y);
+    }
+  }
+  
+  this.on('update', this.draw)
+//  setInterval(this.update, 1)
+
+</draw>

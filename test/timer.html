@@ -1,0 +1,58 @@
+<timetable>
+    <title>RIOT example</title>
+    <timer start="0"></timer>
+    <timer start="10"></timer>
+    <timer start="20"></timer>
+</timetable>
+
+<timer>
+  <p><a onclick={reset}>Seconds Elapsed: </a>{ time4 }<p>
+  
+    this.mixin('property')
+ 
+    this.property('time', opts.start || 0, {
+      checker : function(value) {
+        return value < 10
+      }
+    })
+    this.on('timeCheck', function(value) { this.reset() })
+
+    this.property('time2', function(value) { return this.time *2})
+    
+    this.property('time4', function(value) { return this.time2 *2 })
+
+    this.on('time4Change', this.update)
+
+    var max = 10000
+    this.property('yy')
+
+    reset () {
+        this.time = 0
+
+      // test
+      var arr = []
+      this.xx = max
+      this.yy = max
+  
+      console.time('xx')
+      while(this.xx--) arr[this.xx] = this.xx;
+      console.timeEnd('xx')
+  
+      console.time('yy')
+      while(this.yy--) arr[this.xx] = this.xx;
+      console.timeEnd('yy')
+    }
+
+    tick () {
+        time: ++this.time
+    }
+
+    var timer = setInterval(this.tick, 1000);
+
+    this.on('unmount', function () {
+        console.info('timer cleared');
+        clearInterval(timer);
+    });
+
+  
+</timer>

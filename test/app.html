@@ -1,0 +1,64 @@
+<app>
+
+  <div class="container-fluid">
+  <div class="row" riot-tag="header"></div>
+  <p if={currentMenu}>{currentMenu}</p>
+  <div class="row">
+    <div class="col-md-3" riot-tag="timetable"></div>
+    <div class="col-md-3" riot-tag="draw1"></div>
+    <div class="col-md-3" riot-tag="tree"></div>
+    <div class="col-md-6" riot-tag="menu"></div>
+    <div class="wall col-md-12" riot-tag="stack">stack</div>
+  </div>
+  </div>
+<script>  
+  
+  this.mixin('property')
+  this.property('currentMenu', '')
+
+  var menuStore = MenuStore()
+
+  var data = {
+    ax: 1973,
+    text: 'ax'
+  }
+  
+  Store(data)
+  
+  data.text += ' Ax'
+  
+  this.on('mount', function(){
+
+    this.tags.tree.on('click', function(item) {
+      this.currentMenu = item.name
+//      this.tags.stack.current = this.tags.tree
+//      ramjet.transform( this.tags.header.root, this.tags.menu.root );
+  }.bind(this))
+
+ this.tags.tree.data =  [
+    { name: 'All',
+      children: [
+        { name: '1' },   
+        { name: '2' },
+        { name: '3', 
+          children: [
+            { name: '1' },   
+            { name: '2',
+              children: [
+                { name: '1' },   
+                { name: '2' },
+                { name: '33' },
+              ]
+            },
+            { name: '3' },   
+            { name: '44' },   
+          ]},   
+        ]
+      },
+      { name: '3' },   
+    ]})
+
+</script>
+<style>
+</style>
+</app>

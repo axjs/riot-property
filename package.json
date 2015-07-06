@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/axjs/riot-property",
   "dependencies": {
+    "express": "^4.13.1",
     "install": "^0.1.8",
     "npm": "^2.12.1",
     "riot": "^2.2.2-beta",

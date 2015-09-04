@@ -3,12 +3,16 @@
 
   this.mixin('property')
   
-  this.on('current.set', function() {
+
+  this.on('currentSet', function(tag) {
+    console.log('currentSet', this.current, tag, this) 
     if (!this.current) 
       return;
+    
+    this.stack.innerHtml = ''   
     this.stack.appendChild(this.current.root)
   }.bind(this))  
   
-  this.property('current', opts.current, this.update)
-  
+  this.property('current', opts.current , this.update)
+
 </stack>

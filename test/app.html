@@ -8,7 +8,7 @@
     <div class="col-md-3" riot-tag="draw1"></div>
     <div class="col-md-3" riot-tag="tree"></div>
     <div class="col-md-6" riot-tag="menu"></div>
-    <div class="wall col-md-12" riot-tag="stack">stack</div>
+    <div id="stack" class="wall col-md-12" riot-tag="stack">stack</div>
   </div>
   </div>
 <script>  
@@ -56,8 +56,12 @@
         ]
       },
       { name: '3' },   
-    ]})
-
+    ]
+    console.log('111',   this.tags.stack.current , this.tags.stack, this.tags.tree)
+  this.tags.stack.current = this.tags.tree
+  this.tags.stack.current = this.tags.menu
+    
+  })
 </script>
 <style>
 </style>

@@ -1,8 +1,7 @@
 <tree>
   <ul  class="tree">
     <li each={ data } class={branch:children}>
-      <i if={ children } class="indicator glyphicon {glyphicon-chevron-right:!hide, glyphicon-chevron-down:hide}"></i>
-      <a href="#" onclick={parent.click}  unselectable="on">{name}</a>
+      <a href="#" onclick={parent.click}  unselectable="on"><i if={ children } class="indicator glyphicon {glyphicon-chevron-right:!hide, glyphicon-chevron-down:hide}"></i>{name}</a>
       <tree hide={hide} if={ children } data={ children }></tree>
     </li>
   </ul>

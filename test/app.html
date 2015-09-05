@@ -1,13 +1,16 @@
 <app>
 
+    <login >Login</login>
   <div class="container-fluid">
   <div class="row" riot-tag="header"></div>
+  <div class="row">
+    <div class="col-md-6" riot-tag="menu"></div>
+  </div>
   <p if={currentMenu}>{currentMenu}</p>
   <div class="row">
     <div class="col-md-3" riot-tag="timetable"></div>
     <div class="col-md-3" riot-tag="draw1"></div>
     <div class="col-md-3" riot-tag="tree"></div>
-    <div class="col-md-6" riot-tag="menu"></div>
     <div id="stack" class="wall col-md-12" riot-tag="stack">stack</div>
   </div>
   </div>
@@ -59,7 +62,7 @@
     ]
     console.log('111',   this.tags.stack.current , this.tags.stack, this.tags.tree)
   this.tags.stack.current = this.tags.tree
-  this.tags.stack.current = this.tags.menu
+  // this.tags.stack.current = this.tags.menu
     
   })
 </script>

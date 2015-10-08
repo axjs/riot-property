@@ -1,7 +1,7 @@
 <app>
 
     <login >Login</login>
-  <div class="container-fluid">
+  <div class="container-fluid" onkeyup={ keyup }>
   <div class="row" riot-tag="header"></div>
   <div class="row">
     <div class="col-md-6" riot-tag="menu"></div>
@@ -26,6 +26,9 @@
     text: 'ax'
   }
   
+  keyup (e) {
+    console.log('key', e.which)
+  }
   Store(data)
   
   data.text += ' Ax'

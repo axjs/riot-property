@@ -1,5 +1,5 @@
 <menu>
-    <div class="btn-toolbar" role="toolbar">
+    <div class="col-lg-12 btn-toolbar" role="toolbar">
       <div each={ row in data } class="btn-group btn-group-lg btn-group-justified btn-group-fill-height">
         <a each={ row } disabled={!name} href="#" class="btn btn-default {btn-primary:groupId && name, btn-success:!groupId && name}" onclick={parent.parent.click} role="button">
           <strong if={groupId}>{name}</strong>

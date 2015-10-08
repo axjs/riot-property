@@ -1,40 +1,19 @@
 <login>
-
-  <form class="form-horizontal">
-    <fieldset>
-
-      <legend>Form Name</legend>
-
-      <!-- Text input-->
-      <div class="form-group">
-        <label class="col-md-4 control-label" for="textinput">Text Input</label>
-        <div class="col-md-4">
-          <input id="textinput" name="textinput" type="text" placeholder="Логiн" class="form-control input-md" required="">
-          <span class="help-block">Логiн</span>
-        </div>
-      </div>
-
-      <!-- Password input-->
-      <div class="form-group">
-        <label class="col-md-4 control-label" for="passwordinput">Пароль</label>
-        <div class="col-md-4">
-          <input id="passwordinput" name="passwordinput" type="password" placeholder="Пароль" class="form-control input-md">
-          <span class="help-block">Пароль</span>
-        </div>
-      </div>
-
-      <!-- Button (Double) -->
-      <div class="form-group">
-        <label class="col-md-4 control-label" for="button1id"></label>
-        <div class="col-md-8">
-          <button id="button1id" name="button1id" class="btn btn-success">Good Button</button>
-          <button id="button2id" name="button2id" class="btn btn-danger">Scary Button</button>
-        </div>
-      </div>
-
-    </fieldset>
+  <form onsubmit="{ login }">
+    <input name="username" type="text" placeholder="username">
+    <input name="password" type="password" placeholder="password">
   </form>
 
-  <script>
-  </script>
+  login() {
+  console.log('login')
+    opts.login({
+      username: this.username.value,
+      password: this.password.value
+    })
+  }
+
+  // any tag on the system can listen to login event
+  <!--opts.on('login', function() {-->
+  <!--  $(body).addClass('logged')-->
+  <!--})-->
 </login>

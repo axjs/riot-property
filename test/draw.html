@@ -2,6 +2,7 @@
 
   <canvas id="canvas" onclick={toggle} onmousemove={move}></canvas>
 
+<script>
   this.mixin('lazy-update')
 
   this.canvas.width = 256;
@@ -23,6 +24,8 @@
     render : function (context) {
     }
   }
+  
+  this.last = Date.now()
   
   draw() {
     if (!this.enable)
@@ -46,9 +49,13 @@
       context.fill();
       context.fillText("ax", this.x, this.y);
     }
+    // console.info(1000/(Date.now()-this.last))
+    // this.last = Date.now()
   }
   
   this.on('update', this.draw)
-//  setInterval(this.update, 1)
+  // setInterval(this.update, 1)
+
+</script>
 
 </draw>

@@ -1,4 +1,4 @@
-/* Riot lazy-update mixin 0.11, @license MIT, (c) 2015 Ax */ 
+/* Riot lazy-update mixin 0.11, @license MIT, (c) 2015 Ax */
 
 (function(riot) {
   "use strict"
@@ -20,16 +20,21 @@
       prevent = false
     }).bind(obj)
 
-    obj.update = function() {
-      if (arguments.length)
-        return original.apply(obj, arguments)
+    Object.defineProperty(obj, 'update', {
+      writable: true,
+      configurable: true, 
+      value: function() {
+        if (arguments.length)
+          return original.apply(obj, arguments)
 
-      if (prevent)
-        return
+        if (prevent)
+          return
 
-      prevent = true;
-      requestAnimation(callback)
-    }
+        prevent = true;
+        requestAnimation(callback)
+      }
+    })
+
   }
 
   riot.mixin('lazy-update', {
@@ -37,5 +42,6 @@
       lazy(this, 'update')
     }
   })
+  
 
 })(typeof(riot) !== 'undefined' ? riot : require('riot'))
